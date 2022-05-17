@@ -1,0 +1,6 @@
+token:
+  expiration_time: 86400000
+  secret: my_token_native_application_changed_#1
+  
+gateway:
+  ip: 127.0.0.1

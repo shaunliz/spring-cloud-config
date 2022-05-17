@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    name: sa
+    password: '{cipher}AQCCzAfxrzzrt4RsZryL3ceRWHezqbJ/cwcJavurMlnjTWrSS8teEhOpNuwJ5nr0mtWENYZxxE6wwxHqk7A/ZhZ2sjoo/glgMROCfmAB9GyKhFA79nNyggii0QHls7c6to5CR+RrzxuPbFLwQ5bHA+xcAxzzRwTivGaVoLkiQcI76StznvjOIOrNiz0V70W+ejzKQRUmxQ8WtIJdZlbwg2O0dRk/g8HZhOxfjWXG/L3fiTY2LbsIohrl4w6ww+BfWuuH9r+ALbSs4QppvTOS/ONMq+TJQ/yJ1/dZ6FGvpSOfWwCPt4Hk8BwVmQ9q8vyHQLwxLw0IuNmAA+kWzyiBxLD0h4L0019UZ1ZYHAGLFlR4JSc4e43GWVVSTpuNVS+kOqg='
+    
+token:
+  expiration_time: 86400000
+  secret: my_token_native_user_service
+  
+gateway:
+  ip: 127.0.0.1
+
+order_service:
+  url: http://ORDER-SERVICE:8000/order-service/%s/orders
+#  url: http://127.0.0.1:8000/order-service/%s/orders
+  exception:
+    order_is_empty: There is no order item.
