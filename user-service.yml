@@ -10,7 +10,7 @@ token:
   secret: my_token_native_user_service
   
 gateway:
-  ip: 127.0.0.1
+  ip: 172.18.0.5
 
 order_service:
   url: http://ORDER-SERVICE:8000/order-service/%s/orders
